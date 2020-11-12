@@ -27,11 +27,12 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   --spacing-32: 8rem;
-  --fontFamily-sans: Montserrat, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --fontFamily-serif: "Merriweather", "Georgia", Cambria, "Times New Roman",
-    Times, serif;
+  --fontFamily-sans: "PT Sans", Montserrat, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
+  --fontFamily-serif: "PT Serif", "Merriweather", "Georgia", Cambria,
+    "Times New Roman", Times, serif;
   --font-body: var(--fontFamily-serif);
   --font-heading: var(--fontFamily-sans);
   --fontWeight-normal: 400;
@@ -330,4 +331,31 @@ a:focus {
   ol {
     list-style-position: inside;
   }
+}
+
+.gatsby-highlight {
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"] {
+  -webkit-overflow-scrolling: touch;
+}
+.gatsby-highlight pre[class*="language-"]::before {
+  background: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+  color: white;
+  font-size: 12px;
+  letter-spacing: 0.025rem;
+  padding: 0.1rem 0.5rem;
+  position: absolute;
+  right: 1rem;
+  text-align: right;
+  text-transform: uppercase;
+  top: 0;
+}
+
+.gatsby-highlight pre[class="language-cpp"]::before {
+  content: "c++";
+  background: #ff9800;
+  color: white;
 }
