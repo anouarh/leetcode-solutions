@@ -8,25 +8,31 @@ import kebabCase from "lodash/kebabCase"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import "../css/tags.css"
 
 const TagsPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const group = data.allMarkdownRemark.group
+
+  const capitalize = s => {
+    if (typeof s !== "string") return ""
+    return s.charAt(0).toUpperCase() + s.slice(1)
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title="All tags" />
       <div>
         <h1>Tags</h1>
-        <ul>
+        <div className="container">
           {group.map(tag => (
-            <li key={tag.fieldValue}>
+            <div className="tag" key={tag.fieldValue}>
               <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
+                {capitalize(tag.fieldValue)}
               </Link>
-            </li>
+            </div>
           ))}
-        </ul>
+        </div>
       </div>
     </Layout>
   )
