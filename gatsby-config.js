@@ -6,7 +6,7 @@ module.exports = {
       summary: `, software engineer living and working in Morocco.`,
     },
     description: `A website with all my compiled LeetCode solutions so far.`,
-    siteUrl: ``,
+    siteUrl: `https://www.gainzgeek.com`,
     social: {
     },
   },
