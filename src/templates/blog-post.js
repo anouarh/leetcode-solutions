@@ -5,10 +5,17 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import "../css/blog-post.css"
+
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+
+  const capitalize = s => {
+    if (typeof s !== "string") return ""
+    return s.charAt(0).toUpperCase() + s.slice(1)
+  }
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -23,6 +30,11 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
+          <div className="tags-container">
+            {post.frontmatter.tags.map((item, index) => (
+              <div className="tags">{capitalize(item)}</div>
+            ))}
+          </div>
           <p>{post.frontmatter.date}</p>
         </header>
         <section
@@ -83,6 +95,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        tags
         date(formatString: "MMMM DD, YYYY")
         description
       }
