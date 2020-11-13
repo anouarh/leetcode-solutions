@@ -1,0 +1,14 @@
+.footer-column {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  padding: 10px;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.footer-column a {
+  margin-right: 10px;
+}

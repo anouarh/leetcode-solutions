@@ -1,8 +1,8 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 import "../css/layout.css"
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ data, location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
   let header
@@ -27,7 +27,15 @@ const Layout = ({ location, title, children }) => {
         <header className="global-header">{header}</header>
         <main>{children}</main>
       </div>
-      <footer>© {new Date().getFullYear()}</footer>
+      <footer>
+        <div className="footer-column">
+          Anouar Hilali © {new Date().getFullYear()}
+        </div>
+        <div className="footer-column">
+          <Link to="/">Blog</Link>
+          <Link to="/tags">Tags</Link>
+        </div>
+      </footer>
     </div>
   )
 }
