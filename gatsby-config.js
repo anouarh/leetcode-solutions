@@ -3,7 +3,7 @@ module.exports = {
     title: `LeetCode Solutions`,
     author: {
       name: `Anouar Hilali`,
-      summary: `, software engineer living and working in Morocco.`,
+      summary: `software engineer living and working in Morocco.`,
     },
     description: `A website with all my compiled LeetCode solutions so far.`,
     siteUrl: `https://www.gainzgeek.com`,
