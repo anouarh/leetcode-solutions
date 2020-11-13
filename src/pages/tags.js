@@ -26,11 +26,11 @@ const TagsPage = ({ data, location }) => {
         <h1>Tags</h1>
         <div className="container">
           {group.map(tag => (
-            <div className="tag" key={tag.fieldValue}>
-              <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+            <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+              <div className="tag" key={tag.fieldValue}>
                 {capitalize(tag.fieldValue)}
-              </Link>
-            </div>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
