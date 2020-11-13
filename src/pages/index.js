@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import "../css/blog.css"
+
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
@@ -32,7 +34,7 @@ const BlogIndex = ({ data, location }) => {
           const title = post.frontmatter.title || post.fields.slug
 
           return (
-            <li key={post.fields.slug}>
+            <div className="card" key={post.fields.slug}>
               <article
                 className="post-list-item"
                 itemScope
@@ -57,7 +59,7 @@ const BlogIndex = ({ data, location }) => {
                   />
                 </section>
               </article>
-            </li>
+            </div>
           )
         })}
       </ol>
