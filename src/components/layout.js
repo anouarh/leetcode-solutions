@@ -1,6 +1,10 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { Link } from "gatsby"
+
 import "../css/layout.css"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Layout = ({ data, location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
@@ -9,9 +13,26 @@ const Layout = ({ data, location, title, children }) => {
 
   if (isRootPath) {
     header = (
-      <h1 className="main-heading">
-        <Link to="/">{title}</Link>
-      </h1>
+      <menu>
+        <div className="menu-column">
+          <Link id="title" to="/">
+            {title}
+          </Link>
+        </div>
+        <div className="menu-column">
+          <Link to="/">Home</Link>
+          <Link to="/">Blog</Link>
+          <Link to="/tags">Tags</Link>
+        </div>
+        <div className="menu-column">
+          <Link to="/">
+            <FontAwesomeIcon icon={faLinkedin} />
+          </Link>
+          <Link to="/">
+          <FontAwesomeIcon icon={faEnvelope} />
+          </Link>
+        </div>
+      </menu>
     )
   } else {
     header = (
