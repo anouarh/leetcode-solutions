@@ -12,3 +12,42 @@
 .footer-column a {
   margin-right: 10px;
 }
+
+menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.menu-column {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+menu a {
+  margin-right: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+menu a:hover {
+  color: blue;
+}
+
+menu a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+menu #title {
+  font-size: 1.728rem;
+  font-weight: bolder;
+}
