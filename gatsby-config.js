@@ -1,13 +1,16 @@
 module.exports = {
   siteMetadata: {
-    title: `LeetCode Solutions`,
+    title: `LeetCode School`,
     author: {
       name: `Anouar Hilali`,
       summary: `software engineer living and working in Morocco.`,
     },
-    description: `A website with all my compiled LeetCode solutions so far.`,
-    siteUrl: `https://www.gainzgeek.com`,
+    description: `A website with all my LeetCode solutions so far.`,
+    siteUrl: `https://www.leetcode.school`,
     social: {
+      linkedin: `anouar-hilali`,
+      gmail: `anouar.hilali1@gmail.com`,
+      github: `anouarh`,
     },
   },
   plugins: [

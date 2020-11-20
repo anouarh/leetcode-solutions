@@ -4,11 +4,13 @@ import { Link } from "gatsby"
 import "../css/layout.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
 
-const Layout = ({ data, location, title, children }) => {
+const Layout = ({ location, title, children, social }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
+
   let header
 
   if (isRootPath) {
@@ -25,12 +27,15 @@ const Layout = ({ data, location, title, children }) => {
           <Link to="/tags">Tags</Link>
         </div>
         <div className="menu-column">
-          <Link to="/">
+          <Link to={`https://www.linkedin.com/in/${social.linkedin}`}>
             <FontAwesomeIcon icon={faLinkedin} />
           </Link>
-          <Link to="/">
-          <FontAwesomeIcon icon={faEnvelope} />
+          <Link to={`https://www.github.com/${social.github}`}>
+            <FontAwesomeIcon icon={faGithub} />
           </Link>
+          <a href={`mailto: ${social.gmail}`}>
+            <FontAwesomeIcon icon={faEnvelope} />
+          </a>
         </div>
       </menu>
     )
@@ -53,7 +58,7 @@ const Layout = ({ data, location, title, children }) => {
           Anouar Hilali © {new Date().getFullYear()}
         </div>
         <div className="footer-column">
-          <Link to="/">Blog</Link>
+          <Link to={``}>Blog</Link>
           <Link to="/tags">Tags</Link>
         </div>
       </footer>
