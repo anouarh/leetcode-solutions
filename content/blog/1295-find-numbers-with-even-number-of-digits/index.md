@@ -2,7 +2,10 @@
 title: Find Numbers with Even Number of Digits
 date: "2020-11-20T20:37:03+00:00"
 description: "Solution for LeetCode's Find Numbers with Even Number of Digits."
-tags: ["array", "easy"]
+tags: ["array", "easy", "LeetCode"]
+dataStructure: "Array"
+difficulty: "Easy"
+sourceWebsite: "LeetCode"
 ---
 
 ## Problem Statement
