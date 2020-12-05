@@ -2,7 +2,10 @@
 title: Sum of All Odd Length Subarrays
 date: "2020-11-12T08:47:15+00:00"
 description: "Solution for LeetCode's Sum of All Odd Length Subarrays."
-tags: ["array", "easy"]
+tags: ["array", "easy", "LeetCode"]
+dataStructure: "Array"
+difficulty: "Easy"
+sourceWebsite: "LeetCode"
 ---
 
 ## Problem Statement
