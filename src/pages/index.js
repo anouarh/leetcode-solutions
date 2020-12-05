@@ -39,7 +39,10 @@ const BlogIndex = ({ data, location }) => {
                     </Link>
                   </h2>
                   <small>
-                    {post.frontmatter.date} · {post.timeToRead} minute read
+                    {post.frontmatter.date} · {post.timeToRead} minute read{" "}
+                    {post.frontmatter.sourceWebsite
+                      ? `· ` + post.frontmatter.sourceWebsite
+                      : ""}
                   </small>
                 </header>
                 <section>
@@ -83,6 +86,7 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          sourceWebsite
         }
         timeToRead
       }
