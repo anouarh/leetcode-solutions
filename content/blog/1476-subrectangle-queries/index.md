@@ -1,6 +1,6 @@
 ---
 title: Subrectangle Queries
-date: "22021-05-11T14:44:35+00:00"
+date: "2021-05-11T14:44:35+00:00"
 description: "Solution for LeetCode's Subrectangle Queries."
 tags: ["array", "medium", "LeetCode"]
 dataStructure: "Array"
@@ -20,7 +20,7 @@ The gist of it is that you need to finish writing a class that takes in as input
 
 Iterating over all required matrix elements and updating the value.
 
-```cpp
+```java
 class SubrectangleQueries {
 
     private int[][] rectangle;
