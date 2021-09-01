@@ -38,7 +38,7 @@ class Solution {
 }
 ```
 
-## Usind DP-like solution
+## Using DP-like solution
 
 **Time**: O(n) <br>
 
